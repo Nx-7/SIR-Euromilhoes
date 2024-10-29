@@ -1,65 +1,121 @@
+/* Importação das fontes */
 @font-face {
-    font-family: anotherFont;
+    font-family: "anotherFont";
     src: url("Merriweather-Black.ttf");
 }
 
 @font-face {
-    font-family: BFont;
+    font-family: "BFont";
     src: url("BeautifulPeoplePersonalUse-dE0g.ttf");
 }
 
-html {
-    background-color: aliceblue;
-    font-family: "anotherFont";
+/* Estilo Geral */
+html, body {
+    background-color: #f0f8ff; /* Mantendo o aliceblue */
+    font-family: "anotherFont", Arial, sans-serif;
     font-weight: 400;
     font-style: normal;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
+/* Título */
 h1 {
     text-align: center;
-    font-size: 100px;
+    font-size: 3em;
+    font-family: "BFont", cursive;
+    color: #2a2a72;
+    margin-bottom: 20px;
 }
 
-#divBet {
-    background-color: deepskyblue;
-    border-radius: 50px;
-}
-
+/* Contêiner Principal */
 #divcontainer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 20px;
+    background-color: #e3f2fd;
+    border-radius: 30px;
+    padding: 40px 30px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-div#divBet {
-    width: 50%;
+/* Área de Apostas */
+#divBet {
+    background-color: #90caf9;
+    border-radius: 30px;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
     text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Listas de Números */
+ol.numbers {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
 ol.numbers li {
-    font-family: anotherFont;
-    display: inline-block;
-    width: 100px;
-    height: 75px;
-    font-size: 50px;
-    text-align: center;
-    border-radius: 20px;
-    margin: 10px;
-    padding: 10px;
+    font-family: "anotherFont";
+    font-size: 2em;
+    color: #ffffff;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
+/* Números Principais */
 #olMain li {
-    background-color: greenyellow;
+    background-color: #66bb6a;
 }
 
+/* Estrelas */
 #olStars li {
-    background-color: yellow;
-    ;
+    background-color: #ffa726;
 }
 
+/* Botão de Nova Aposta */
 #genBtn {
     width: 200px;
-    height: 75px;
-    font-size: 20px;
-    margin: 20px;
+    height: 50px;
+    font-size: 1.2em;
+    color: #ffffff;
+    background-color: #5c6bc0;
+    border: none;
+    border-radius: 25px;
+    margin-top: 20px;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#genBtn:hover {
+    background-color: #3949ab;
+    transform: scale(1.05);
+}
+
+#genBtn:active {
+    background-color: #283593;
+    transform: scale(1);
+}
+
+/* Rodapé */
+footer {
+    font-size: 0.9em;
+    color: #616161;
+    margin-top: 20px;
+    text-align: center;
 }
