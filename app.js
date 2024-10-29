@@ -1,6 +1,7 @@
-express = require("express");
+const express = require("express");
 
-app = express();
+const app = express();
+const PORT = process.env.PORT || 3000;
 
 app.use(express.static("public"));
 
@@ -10,7 +11,6 @@ app.get("/hello", function (req, res) {
 
 app.get("/euro", function (req, res) {
   res.setHeader("Content-Type", "application/json");
-  //res.send("{numeros: [1,2,3,4,5]. starts: [1,2]}");
   const response = bet();
   res.send(JSON.stringify(response));
 });
@@ -25,8 +25,8 @@ function generate(n, min, max) {
 }
 
 function bet() {
-  numbers = generate(5, 1, 50);
-  stars = generate(2, 1, 12);
+  const numbers = generate(5, 1, 50);
+  const stars = generate(2, 1, 12);
   const newBet = {
     numeros: numbers,
     stars: stars,
@@ -34,5 +34,4 @@ function bet() {
   return newBet;
 }
 
-console.log("here");
-app.listen(3000, () => console.log("Listening"));
+app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
