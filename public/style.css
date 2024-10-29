@@ -1,121 +1,117 @@
-/* Importação das fontes */
 @font-face {
-    font-family: "anotherFont";
-    src: url("Merriweather-Black.ttf");
+  font-family: "anotherFont";
+  src: url("Merriweather-Black.ttf");
 }
 
-@font-face {
-    font-family: "BFont";
-    src: url("BeautifulPeoplePersonalUse-dE0g.ttf");
+html,
+body {
+  background: #ffcf87;
+  font-family: "anotherFont", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-/* Estilo Geral */
-html, body {
-    background-color: #f0f8ff; /* Mantendo o aliceblue */
-    font-family: "anotherFont", Arial, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-/* Título */
 h1 {
-    text-align: center;
-    font-size: 3em;
-    font-family: "BFont", cursive;
-    color: #2a2a72;
-    margin-bottom: 20px;
+  text-align: center;
+  font-size: 3em;
+  color: #1b1b1b;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
 }
 
-/* Contêiner Principal */
 #divcontainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    background-color: #e3f2fd;
-    border-radius: 30px;
-    padding: 40px 30px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 600px;
 }
 
-/* Área de Apostas */
 #divBet {
-    background-color: #90caf9;
-    border-radius: 30px;
-    padding: 20px;
-    width: 80%;
-    max-width: 600px;
-    text-align: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Listas de Números */
 ol.numbers {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 }
 
 ol.numbers li {
-    font-family: "anotherFont";
-    font-size: 2em;
-    color: #ffffff;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  font-family: "anotherFont";
+  font-size: 2.5em;
+  color: #ffffff;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
 }
 
-/* Números Principais */
 #olMain li {
-    background-color: #66bb6a;
+  background-color: #2980b9;
 }
 
-/* Estrelas */
+#olMain li:hover {
+  transform: scale(1.1);
+}
+
 #olStars li {
-    background-color: #ffa726;
+  background-color: #e67e22;
 }
 
-/* Botão de Nova Aposta */
+#olStars li:hover {
+  transform: scale(1.1);
+}
+
 #genBtn {
-    width: 200px;
-    height: 50px;
-    font-size: 1.2em;
-    color: #ffffff;
-    background-color: #5c6bc0;
-    border: none;
-    border-radius: 25px;
-    margin-top: 20px;
-    cursor: pointer;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s, transform 0.2s;
+  width: 220px;
+  height: 60px;
+  font-size: 1.5em;
+  color: #ffffff;
+  background-color: #27ae60;
+  border: none;
+  border-radius: 30px;
+  margin-top: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 #genBtn:hover {
-    background-color: #3949ab;
-    transform: scale(1.05);
+  background-color: #2ecc71;
+  transform: scale(1.05);
 }
 
 #genBtn:active {
-    background-color: #283593;
-    transform: scale(1);
+  background-color: #1e7f3c;
+  transform: scale(0.95);
 }
 
-/* Rodapé */
 footer {
-    font-size: 0.9em;
-    color: #616161;
-    margin-top: 20px;
-    text-align: center;
+  font-size: 1em;
+  color: #34495e;
+  margin-top: 20px;
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
